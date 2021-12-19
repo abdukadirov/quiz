@@ -12,7 +12,7 @@ const Welcome = props => {
       clearInterval(countRef.current)
       props.timer(timer)
     }
-  }, [props.completed])
+  }, [props, timer])
 
   const handleStart = () => {
     setIsStarted(true)

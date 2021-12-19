@@ -74,7 +74,7 @@ const Quiz = props => {
                   <Card.Text className="card-text">
                     {currentQuestion.name && currentQuestion.name.map(child => (
                       <label className="d-block" key={child.id}>
-                        <Button className={"ml-2" + clicked && child.id === selectedAnswerId || "secondary"}
+                        <Button className={"ml-2" + (clicked && (child.id === selectedAnswerId)) || "secondary"}
                                 onClick={() => checkAnswer(child)}
                                 variant="outline-info">{child.name}</Button>
                       </label>
